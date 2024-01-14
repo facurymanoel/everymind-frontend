@@ -1,11 +1,13 @@
  
- <table>
+ <table class="table">
         
-       <thead>
-             <th>Id</th>
-             <th>Nome do produto</th>
-             <th>Descrição do produto</th>
-             <th>preço do produto</th>
+       <thead class="thread-dark">
+            <tr>
+               <th scope="col">Id</th>
+               <th scope="col">Nome do produto</th>
+               <th scope="col">Descrição do produto</th>
+               <th scope="col">preço do produto</th>
+            </tr>
        </thead>
        
        <tbody>
@@ -14,8 +16,7 @@
                 <td>{{student.nomeProduto}}</td>
                 <td>{{student.descricaoProduto}}</td>
                 <td>{{student.precoProduto}}</td>
-
-                
+                <td><button (click)="deleteUsuario(student.codigoProduto)" class="btn btn-primary">Delete</button></td>
             </tr>
        </tbody>
 

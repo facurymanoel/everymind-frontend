@@ -15,4 +15,8 @@ export class UsuarioService {
   getStudentList(): Observable<any> {
       return this.http.get<any>(AppConstants.baseURL);
   }
+
+  deletarUsuario(id: number): Observable<any>{
+        return this.http.delete(AppConstants.baseURL + id, {responseType : 'text'});
+  }
 }
