@@ -1,0 +1,22 @@
+ 
+ <table>
+        
+       <thead>
+             <th>Id</th>
+             <th>Nome do produto</th>
+             <th>Descrição do produto</th>
+             <th>preço do produto</th>
+       </thead>
+       
+       <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.codigoProduto}}</td>
+                <td>{{student.nomeProduto}}</td>
+                <td>{{student.descricaoProduto}}</td>
+                <td>{{student.precoProduto}}</td>
+
+                
+            </tr>
+       </tbody>
+
+ </table>

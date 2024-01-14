@@ -1,5 +1,6 @@
+import { LoginServiceService } from './service/login-service.service';
 import { Component } from '@angular/core';
-
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
