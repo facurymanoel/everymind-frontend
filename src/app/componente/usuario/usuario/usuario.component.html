@@ -1,4 +1,17 @@
  
+ <br/>
+ <br/>
+ <form class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="text" class="form-control" [(ngModel)]="nome" id="nome" name="nome" placeholder="Pesquisa por Nome">
+    </div>
+    <button type="button" (click)="consultarUser()" class="btn btn-primary mb-2">Buscar</button>
+ 
+    <button type="button" [routerLink]="['/usuarioAdd']" routerLinkActive="router-link-active" style="margin-left: 5px;"  class="btn btn-success mb-2">Novo</button>
+  </form>
+  <br/>
+ <br/>
+ 
  <table class="table">
         
        <thead class="thread-dark">

@@ -11,6 +11,7 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 export class UsuarioComponent implements OnInit {
 
   students: Array<User> ;
+  nome: string;
 
   constructor(private usuarioService: UsuarioService) { 
       
@@ -32,6 +33,12 @@ export class UsuarioComponent implements OnInit {
          });  
 
       });
+  }
+
+  consultarUser(){
+       this.usuarioService.consultarUser(this.nome).subscribe( data =>{
+            this.students = data;
+       });
   }
 
 }
