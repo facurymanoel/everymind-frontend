@@ -12,6 +12,7 @@ export class UsuarioComponent implements OnInit {
 
   students: Array<User> ;
   nome: string;
+  usuario = new User();
 
   constructor(private usuarioService: UsuarioService) { 
       
@@ -40,5 +41,19 @@ export class UsuarioComponent implements OnInit {
             this.students = data;
        });
   }
+
+  salvarUser(){
+      this.usuarioService.salvarUsuario(this.usuario).subscribe( data =>{
+        this.novo();
+        console.info("Gravou User: " + data);
+         
+      });
+  }
+
+  novo(){
+    //this.usuario = new User();
+    //this.nome = '';
+       localStorage.clear();
+   }
 
 }

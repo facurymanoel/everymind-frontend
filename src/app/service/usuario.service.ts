@@ -24,4 +24,8 @@ export class UsuarioService {
        return this.http.get(AppConstants.baseURL + "produtoPorNome/" + nome);
 
   }
+
+  salvarUsuario(user: any) : Observable<any>{
+      return this.http.post<any>(AppConstants.baseURL, user);
+  }
 }

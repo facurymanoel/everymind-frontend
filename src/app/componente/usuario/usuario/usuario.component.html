@@ -6,20 +6,20 @@
       <input type="text" class="form-control" [(ngModel)]="nome" id="nome" name="nome" placeholder="Pesquisa por Nome">
     </div>
     <button type="button" (click)="consultarUser()" class="btn btn-primary mb-2">Buscar</button>
- 
-    <button type="button" [routerLink]="['/usuarioAdd']" routerLinkActive="router-link-active" style="margin-left: 5px;"  class="btn btn-success mb-2">Novo</button>
-  </form>
+    <button type="button" [routerLink]="['/usuarioAdd']" routerLinkActive="router-link-active" style="margin-left: 5px;" class="btn btn-success mb-2">Novo</button> 
+</form>
   <br/>
  <br/>
  
  <table class="table">
-        
-       <thead class="thread-dark">
+        <thead class="thread-dark">
             <tr>
                <th scope="col">Id</th>
                <th scope="col">Nome do produto</th>
                <th scope="col">Descrição do produto</th>
                <th scope="col">preço do produto</th>
+               <th scope="col">Delete</th>
+               <th scope="col">Editar</th>
             </tr>
        </thead>
        
@@ -30,6 +30,8 @@
                 <td>{{student.descricaoProduto}}</td>
                 <td>{{student.precoProduto}}</td>
                 <td><button (click)="deleteUsuario(student.codigoProduto)" class="btn btn-primary">Delete</button></td>
+                <td><button  [routerLink]="['/usuarioAdd', student.codigoProduto]" routerLinkActive="router-link-active" class="btn btn-warning">Editar</button></td>
+                
             </tr>
        </tbody>
 
