@@ -16,16 +16,24 @@ export class UsuarioService {
       return this.http.get<any>(AppConstants.baseURL);
   }
 
-  deletarUsuario(id: number): Observable<any>{
-        return this.http.delete(AppConstants.baseURL + id, {responseType : 'text'});
+  getStudant(id: any): Observable<any>{
+      return this.http.get<any>(AppConstants.baseURL + id);
   }
 
-  consultarUser(nome: string) : Observable<any>{
+  deletarProduto(id: number): Observable<any>{
+        return this.http.delete(AppConstants.baseURL + id, {responseType : 'text'});
+  }
+   
+  consultarProduto(nome: string) : Observable<any>{
        return this.http.get(AppConstants.baseURL + "produtoPorNome/" + nome);
 
   }
 
-  salvarUsuario(user: any) : Observable<any>{
-      return this.http.post<any>(AppConstants.baseURL, user);
-  }
+  salvarProduto(user: any) : Observable<any>{
+       return this.http.post<any>(AppConstants.baseURL, user);
+   }
+
+   updateProduto(id: number, user: any) : Observable<any>{
+    return this.http.put<any>(AppConstants.baseURL + id, user);
+}
 }

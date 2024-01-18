@@ -1,1 +1,35 @@
-<p>Tela de Produtos Testando 2024</p>
+<h3 style="padding: 10px;">Tela de Produtos</h3>
+ <form style="padding: 10px;">
+    <div class="form-row">
+        <div class="form-group col-md-1">
+            <label for="codigoProduto">ID</label>
+            <input type="text" [(ngModel)]="usuario.codigoProduto" class="form-control" id="codigoProduto" readonly name="codigoProduto" autocomplete="false">
+
+        </div>
+     </div>
+    <div  class="form-row">
+        <div class="form-group col-md-12">
+           <label for="nomeProduto">Nome do Produto</label> 
+           <input type="text" [(ngModel)]="usuario.nomeProduto" class="form-control" id="nomeProduto" required name="nomeProduto" autocomplete="false"> 
+        </div>
+    </div>
+    <div  class="form-row">
+        <div class="form-group col-md-6">
+           <label for="descricaoProduto">Descrição do Produto</label> 
+           <input type="text" [(ngModel)]="usuario.descricaoProduto" class="form-control" id="descricaoProduto" required name="descricaoProduto" autocomplete="false"> 
+        </div>
+        <div class="form-group col-md-6">
+            <label for="precoProduto">Preço do Produto</label> 
+            <input type="text" [(ngModel)]="usuario.precoProduto" class="form-control" id="precoProduto" required name="precoProduto" autocomplete="false"> 
+        </div>
+    </div>
+    <div  class="form-row">
+        <div class="form-group col-md-6">
+            <button type="button" class="btn btn-primary" [routerLink]="['/usuarioProduto']" routerLinkActive="router-link-active" >Voltar</button>
+            <button type="button" class="btn btn-primary" (click)="novo()" style="margin-left:10px;">Novo</button>
+            <button type="button" class="btn btn-primary" (click)="salvarProduto()" style="margin-left:10px;">Salvar</button>
+            <button type="button" class="btn btn-primary" (click)="atualizarProduto(usuario.codigoProduto)" style="margin-left:10px;">Atualizar</button>
+        </div>
+    </div>
+
+ </form>

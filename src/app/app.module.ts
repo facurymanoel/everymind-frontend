@@ -16,7 +16,7 @@ export const appRouters: Routes = [
     //{path: 'usuarioList', component: UsuarioComponent},
       {path: 'usuarioAdd', component: UsuarioAddComponent},
       {path: 'usuarioAdd/:id', component: UsuarioAddComponent},
-      {path: 'usuarioProduto', component: UsuarioComponent},
+      {path: 'usuarioProduto', component: UsuarioComponent}
 
   ];
    

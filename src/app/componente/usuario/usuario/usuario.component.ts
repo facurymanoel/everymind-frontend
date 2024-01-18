@@ -26,7 +26,7 @@ export class UsuarioComponent implements OnInit {
   }
 
   deleteUsuario(id: number){
-      this.usuarioService.deletarUsuario(id).subscribe(data =>{
+      this.usuarioService.deletarProduto(id).subscribe(data =>{
         console.log("Retorno do método delete : " + data);
         this.usuarioService.getStudentList().subscribe( data =>{
         this.students = data;
@@ -37,23 +37,10 @@ export class UsuarioComponent implements OnInit {
   }
 
   consultarUser(){
-       this.usuarioService.consultarUser(this.nome).subscribe( data =>{
+       this.usuarioService.consultarProduto(this.nome).subscribe( data =>{
             this.students = data;
        });
   }
 
-  salvarUser(){
-      this.usuarioService.salvarUsuario(this.usuario).subscribe( data =>{
-        this.novo();
-        console.info("Gravou User: " + data);
-         
-      });
-  }
-
-  novo(){
-    //this.usuario = new User();
-    //this.nome = '';
-       localStorage.clear();
-   }
-
+    
 }
