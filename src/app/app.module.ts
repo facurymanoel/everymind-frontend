@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsuarioComponent } from './componente/usuario/usuario/usuario.component';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { UsuarioAddComponent } from './componente/usuario/usuario-add/usuario-add.component';
+import { NgxPaginationModule } from 'ngx-pagination';
  
 
 export const appRouters: Routes = [
@@ -37,7 +38,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    routes
+    routes,
+    NgxPaginationModule
       
   ],
   providers: [],

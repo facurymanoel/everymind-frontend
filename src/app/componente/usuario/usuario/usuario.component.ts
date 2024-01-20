@@ -13,6 +13,8 @@ export class UsuarioComponent implements OnInit {
   students: Array<User> ;
   nome: string;
   usuario = new User();
+  p:number;
+  total: number
 
   constructor(private usuarioService: UsuarioService) { 
       
@@ -40,6 +42,10 @@ export class UsuarioComponent implements OnInit {
        this.usuarioService.consultarProduto(this.nome).subscribe( data =>{
             this.students = data;
        });
+  }
+
+  carregarPagina(pagina: any){
+     console.info("Página -> " + pagina);
   }
 
     
